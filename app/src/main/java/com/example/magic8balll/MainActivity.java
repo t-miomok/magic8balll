@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        AppCenter.start(getApplication(), "fa7b6576-d8bc-4492-846b-d677ae394ad3",
+                Analytics.class, Crashes.class);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,8 +38,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        AppCenter.start(getApplication(), "fa7b6576-d8bc-4492-846b-d677ae394ad3",
-                Analytics.class, Crashes.class);
+
     }
 
     @Override
